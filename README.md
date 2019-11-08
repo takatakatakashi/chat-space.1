@@ -14,8 +14,8 @@
 |------|----|-------|
 |name|string|null: false, unique: true|
 ### Association
-- belongs_to :users
-- has_many :groups.users 
+- has_many :users
+- has_many :groups_users
 - has_many :messages
 
 ## usersテーブル
@@ -24,8 +24,8 @@
 |email|string|null: false, unique: true|
 |name|string|null: false, add_index: true|
 ### Association
-- belongs_to :groups
-- has_many :groups.users
+- has_many :groups
+- has_many :groups_users
 - has_many :messages
 
 ## groups_usersテーブル
