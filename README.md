@@ -1,3 +1,5 @@
+# README
+## how to use GitHub Desktop
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
