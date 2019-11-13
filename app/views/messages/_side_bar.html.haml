@@ -1,0 +1,18 @@
+.side_bar
+  .side-header
+    .side-header__box
+      %ul.side-header__box__name
+        サンプル
+      %ul.side-header__box__menu
+        %li.list
+          = link_to do
+            = fa_icon 'edit', class: 'icon'
+        %li.list
+          = link_to do
+            = fa_icon 'cog', class: 'icon'
+  .groups
+    .group
+      %p.group__name
+        sanmpl
+      %P.group__message
+        まだメッセージはありません
