@@ -1,4 +1,12 @@
 class GroupsController < ApplicationController
+  def index
+  end
+
+  def edit
+  end
+
+  def update
+  end
 
   def new 
     @group = Group.new
@@ -19,10 +27,6 @@ class GroupsController < ApplicationController
     params.require(:group).permit(:name, user_ids: [] )
   end
   
-  def edit
-  end
-
-  def update
-  end
+ 
 
 end
