@@ -2,10 +2,9 @@
   .main-header
     .main-header__left-box
       %ul.main-header__left-box__name
-        group name
+        = @group_name
       %ui.main-header__left-box__member
-        Menber
-        name
+        = @group_member_name
     .group
       = link_to edit_group_path(1) do
         Edit
