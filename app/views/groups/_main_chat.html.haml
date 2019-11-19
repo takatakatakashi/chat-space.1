@@ -2,10 +2,10 @@
   .main-header
     .main-header__left-header
       %ul.main-header__left-header__name
-        = @group.name
+        -# = @group.name
       %ui.main-header__left-header__member
         Member:
-        - @group.users.each do |user|
+        -# - @group.users.each do |user|
           .member
             = user.name
     .group
