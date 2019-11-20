@@ -36,6 +36,8 @@
     box-sizing: border-box;
     padding: 46px 10px;
     height: calc(100vh - 170px);
+    overflow: scroll;
+    
     .message {
       margin: 0px 40px;
       .upper-message {
