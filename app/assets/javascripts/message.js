@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message) {
     var image = (message.image) ? `<img class= "lower-message__image" src=${message.image} >` : "";
-    var html = `<div class="message" data-message_id="${message.id}">
+    var html = `<div class="message" data-id="${message.id}">
           <div class="upper-message">
             <div class="upper-message__user-name">
               ${message.user_name}
@@ -44,7 +44,7 @@ $(function(){
   });
   var reloadMessages = function () {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
-      last_message_id = $('.message:last').data("message_id");
+      last_message_id = $('.message:last').data("id");
       console.log(last_message_id);
       $.ajax({
         url: "api/messages",
