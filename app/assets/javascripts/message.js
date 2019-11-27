@@ -42,13 +42,13 @@ $(function(){
       return false;
   });
   var reloadMessages = function () {
-    if (window.location.href.match(/\/groups\/\d+\/messages/)){
-      var last_message_id = $('.message:last').data("message-id");
+      last_message_id = $('.message:last').data("message-id");
+    console.log(last_message_id);
       $.ajax({
         url: "api/messages",
         type: 'get',
         dataType: 'json',
-        data: {last_id: last_message_id}
+        data: {id: last_message_id}
       })
       .done(function (messages) {
         var insertHTML = '';
@@ -62,6 +62,5 @@ $(function(){
         alert('自動更新に失敗しました');
       });
     }
-  };
-  setInterval(reloadMessages, 5000);
-  });
+    setInterval(reloadMessages, 7000);
+});
